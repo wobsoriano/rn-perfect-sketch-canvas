@@ -1,2 +1,1 @@
-export * from './components/SketchCanvas';
-export * from './components/types';
+export * from 'src/components';

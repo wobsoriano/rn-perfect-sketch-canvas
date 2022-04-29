@@ -1,4 +1,4 @@
-import type { SketchCanvasProps } from 'src/components/types';
+import type { SketchCanvasProps } from 'src/components/SketchCanvas/types';
 
 export default function createSvgFromPaths(
   paths: {

@@ -12,7 +12,7 @@ export default function createHistoryStack<T>(current: T) {
   return {
     push: (value: T | ((payload: T) => T)) => {
       stack.length = index;
-      // @ts-expect-error: Value can be a function
+      // @ts-ignore: Value can be a function
       stack[index++] = typeof value === 'function' ? value(current) : value;
 
       return update();

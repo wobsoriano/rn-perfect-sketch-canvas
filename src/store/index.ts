@@ -1,5 +1,5 @@
 import getStroke from 'perfect-freehand';
-import type { SketchCanvasProps } from 'src/components/types';
+import type { SketchCanvasProps } from 'src/components/SketchCanvas/types';
 import { getSvgPathFromStroke } from 'src/utils';
 import { proxy } from 'valtio';
 import { derive } from 'valtio/utils';
@@ -9,19 +9,21 @@ type Point = {
   y: number;
 };
 
+interface CompletedPoints {
+  id: number;
+  points: Point[];
+  color: SketchCanvasProps['strokeColor'];
+  width: SketchCanvasProps['strokeWidth'];
+  style: SketchCanvasProps['strokeStyle'];
+}
+
 export const drawingState = proxy({
   isDrawing: false,
   currentPoints: { points: null, strokeWidth: 8 } as {
     points: Point[] | null;
     width?: SketchCanvasProps['strokeWidth'];
   },
-  completedPoints: [] as {
-    id: number;
-    points: Point[];
-    color: SketchCanvasProps['strokeColor'];
-    width: SketchCanvasProps['strokeWidth'];
-    style: SketchCanvasProps['strokeStyle'];
-  }[],
+  completedPoints: [] as CompletedPoints[],
 });
 
 export const derivedPaths = derive({

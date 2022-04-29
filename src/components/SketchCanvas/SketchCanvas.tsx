@@ -11,7 +11,7 @@ import React, {
   useImperativeHandle,
   useMemo,
 } from 'react';
-import { drawingState, derivedPaths } from '../store';
+import { drawingState, derivedPaths } from 'src/store';
 import { useSnapshot } from 'valtio';
 import { createHistoryStack, createSvgFromPaths } from 'src/utils';
 import type { SketchCanvasRef, SketchCanvasProps } from './types';
@@ -77,8 +77,7 @@ export const SketchCanvas = forwardRef<SketchCanvasRef, SketchCanvasProps>(
         return canvasRef.current?.makeImageSnapshot();
       },
       toSvg: (width, height, backgroundColor) => {
-        // TODO: Return as svg string
-        return createSvgFromPaths([], {
+        return createSvgFromPaths(derivedPaths.completed, {
           width,
           height,
           backgroundColor,
