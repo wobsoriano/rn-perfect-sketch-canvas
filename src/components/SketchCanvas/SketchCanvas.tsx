@@ -16,13 +16,14 @@ import { useSnapshot } from 'valtio';
 import { createHistoryStack, createSvgFromPaths } from 'src/utils';
 import type { SketchCanvasRef, SketchCanvasProps } from './types';
 import { ImageFormat } from './types';
+import { STROKE_COLOR, STROKE_STYLE, STROKE_WIDTH } from './constants';
 
 export const SketchCanvas = forwardRef<SketchCanvasRef, SketchCanvasProps>(
   (
     {
-      strokeWidth = 8,
-      strokeColor = 'black',
-      strokeStyle = 'fill',
+      strokeWidth = STROKE_WIDTH,
+      strokeColor = STROKE_COLOR,
+      strokeStyle = STROKE_STYLE,
       containerStyle,
       children,
       topChildren,

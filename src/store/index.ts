@@ -1,4 +1,5 @@
 import getStroke from 'perfect-freehand';
+import { STROKE_WIDTH } from 'src/components/SketchCanvas/constants';
 import type { SketchCanvasProps } from 'src/components/SketchCanvas/types';
 import { getSvgPathFromStroke } from 'src/utils';
 import { proxy } from 'valtio';
@@ -19,7 +20,7 @@ interface CompletedPoints {
 
 export const drawingState = proxy({
   isDrawing: false,
-  currentPoints: { points: null, strokeWidth: 8 } as {
+  currentPoints: { points: null, strokeWidth: STROKE_WIDTH } as {
     points: Point[] | null;
     width?: SketchCanvasProps['strokeWidth'];
   },

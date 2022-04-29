@@ -7,6 +7,8 @@ export enum ImageFormat {
   WEBP,
 }
 
+export type StrokeStyle = 'stroke' | 'fill';
+
 export interface SketchCanvasRef {
   reset: () => void;
   undo: () => void;
