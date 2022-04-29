@@ -34,7 +34,10 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "sketch",
+    "canvas",
+    "skia"
   ],
   "repository": "https://github.com/wobsoriano/rn-perfect-sketch-canvas",
   "author": "Robert Soriano <sorianorobertc@gmail.com> (https://github.com/wobsoriano)",
