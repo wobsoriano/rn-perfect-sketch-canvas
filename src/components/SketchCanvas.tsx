@@ -77,6 +77,7 @@ export const SketchCanvas = forwardRef<SketchCanvasRef, SketchCanvasProps>(
         return canvasRef.current?.makeImageSnapshot();
       },
       toSvg: (width, height, backgroundColor) => {
+        // TODO: Return as svg string
         return createSvgFromPaths([], {
           width,
           height,

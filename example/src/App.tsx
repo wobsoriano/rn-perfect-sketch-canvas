@@ -1,18 +1,12 @@
 import * as React from 'react';
 
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'rn-perfect-sketch-canvas';
+import { StyleSheet, View } from 'react-native';
+import { SketchCanvas } from 'rn-perfect-sketch-canvas';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
-
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <SketchCanvas />
     </View>
   );
 }
