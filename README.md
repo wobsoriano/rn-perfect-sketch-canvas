@@ -47,11 +47,11 @@ const styles = StyleSheet.create({
 | Method           | Description|
 | ------------------ | -------- |
 | `reset`   | Clear all the paths.   |
-| `undo`      | Delete the latest path.   |
-| `redo`      | number   |
+| `undo`      | Undo   |
+| `redo`      | Redo   |
 | `toBase64`      | Get the base64 of image.   |
-| `toImage`      | Get a snapshot from the canvas in the surface   |
-| `toSvg`      | Get the svg string of all paths   |
+| `toImage`      | Get a snapshot from the canvas in the surface.   |
+| `toSvg`      | Get the svg string of all paths.   |
 
 ## Contributing
 
