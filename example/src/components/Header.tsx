@@ -1,6 +1,7 @@
 import React, { MutableRefObject } from 'react';
 import { Text, View, TouchableOpacity, StyleSheet } from 'react-native';
 import type { SketchCanvasRef } from 'rn-perfect-sketch-canvas';
+import { getElevation } from '../utils';
 
 interface Props {
   canvasRef: MutableRefObject<SketchCanvasRef | null>;
@@ -10,7 +11,9 @@ const Header: React.FC<Props> = ({ canvasRef }) => {
   /**
    * Reset the canvas & draw state
    */
-  const reset = () => {};
+  const reset = () => {
+    canvasRef.current?.reset();
+  };
 
   const save = () => {
     // save as svg
@@ -90,6 +93,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 100,
+    ...getElevation(1),
   },
   buttonText: {
     color: 'black',
