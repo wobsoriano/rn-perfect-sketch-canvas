@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
 | ------------------ | -------- | ------- | ----------------------------------------------------- |
 | `containerStyle`   | object   | {}       | Styles to be applied on canvas component.            |
 | `strokeColor`      | string   | black   | Color of stroke.                                      |
-| `strokeWidth`      | number   | .5      | Size (diameter) of the stroke.                        |
+| `strokeWidth`      | number   | 8      | Size (diameter) of the stroke.                        |
 
 ## Methods
 
