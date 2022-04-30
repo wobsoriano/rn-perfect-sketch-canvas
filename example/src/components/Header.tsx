@@ -19,7 +19,10 @@ const Header: React.FC<Props> = ({ canvasRef }) => {
   };
 
   const save = () => {
-    // save as svg
+    const image = canvasRef.current?.toSvg(500, 500);
+    if (image) {
+      console.log('SVG', image);
+    }
   };
 
   const undo = () => {
