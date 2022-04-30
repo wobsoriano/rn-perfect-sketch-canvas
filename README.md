@@ -38,9 +38,20 @@ const styles = StyleSheet.create({
 
 | Property           | Type     | Default | Description                                           |
 | ------------------ | -------- | ------- | ----------------------------------------------------- |
-| `containerStyle`   | object   | {}       | Styles to be applied on canvas component.             |
+| `containerStyle`   | object   | {}       | Styles to be applied on canvas component.            |
 | `strokeColor`      | string   | black   | Color of stroke.                                      |
 | `strokeWidth`      | number   | .5      | Size (diameter) of the stroke.                        |
+
+## Methods
+
+| Method           | Description|
+| ------------------ | -------- |
+| `reset`   | Clear all the paths.   |
+| `undo`      | Delete the latest path.   |
+| `redo`      | number   |
+| `toBase64`      | Get the base64 of image.   |
+| `toImage`      | Get a snapshot from the canvas in the surface   |
+| `toSvg`      | Get the svg string of all paths   |
 
 ## Contributing
 
