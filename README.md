@@ -1,6 +1,6 @@
 # rn-perfect-sketch-canvas
 
-A React Native component for drawing perfect pressure-sensitive freehand lines using [perfect-freehand](https://github.com/steveruizok/perfect-freehand) and Skia renderer.
+A React Native component for drawing perfect pressure-sensitive freehand lines using [perfect-freehand](https://github.com/steveruizok/perfect-freehand) and [Skia renderer](https://shopify.github.io/react-native-skia/).
 
 ## Installation
 
@@ -60,6 +60,13 @@ const styles = StyleSheet.create({
 ## Contributing
 
 See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
+
+## Inspired By
+
+Please check out these previous works that helped inspire the creation of rn-perfect-sketch-canvas.
+
+- [terrylinla/react-native-sketch-canvas](https://github.com/terrylinla/react-native-sketch-canvas) - A React Native component for drawing by touching on both iOS and Android.
+- [uragirii/rn-skia-sketch-canvas](https://github.com/uragirii/rn-skia-sketch-canvas) - A React Native component for drawing using Skia renderer.
 
 ## License
 
