@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
 | `reset()`   | Clear all the paths.   |
 | `undo()`      | Undo   |
 | `redo()`      | Redo   |
-| `toBase64(format, quality)`      | Get the base64 of image.   |
+| `toBase64(format?: ImageFormat, quality?: number)`      | Get the base64 of image.   |
 | `toImage()`      | Get a snapshot from the canvas in the surface.   |
 | `toSvg(width: number, height: number, backgroundColor?: string)`      | Get the svg string of all paths.   |
 | `toPoints()`      | Get the array of point groups that got drawn in the canvas.    |
