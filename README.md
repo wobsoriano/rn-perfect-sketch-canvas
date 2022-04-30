@@ -1,22 +1,46 @@
 # rn-perfect-sketch-canvas
 
-Perfect pressure-sensitive drawing for both iOS and Android
+A React Native component for drawing perfect pressure-sensitive freehand lines using [perfect-freehand](https://github.com/steveruizok/perfect-freehand) and Skia renderer.
 
 ## Installation
 
 ```sh
-npm install rn-perfect-sketch-canvas
+npm install @shopify/react-native-skia rn-perfect-sketch-canvas
 ```
 
 ## Usage
 
-```js
-import { multiply } from "rn-perfect-sketch-canvas";
+```tsx
+import React, { useRef } from 'react';
+import { StyleSheet, SafeAreaView, View } from 'react-native';
+import { SketchCanvas, SketchCanvasRef } from 'rn-perfect-sketch-canvas';
 
-// ...
+export default function App() {
+  return (
+    <SafeAreaView style={styles.container}>
+      <SketchCanvas
+        strokeColor={'black'}
+        strokeWidth={8}
+        containerStyle={styles.container}
+      />
+    </SafeAreaView>
+  );
+}
 
-const result = await multiply(3, 7);
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});
 ```
+
+## Props
+
+| Property           | Type     | Default | Description                                           |
+| ------------------ | -------- | ------- | ----------------------------------------------------- |
+| `containerStyle`   | object   | {}       | Styles to be applied on canvas component.             |
+| `strokeColor`      | string   | black   | Color of stroke.                                      |
+| `strokeWidth`      | number   | .5      | Size (diameter) of the stroke.                        |
 
 ## Contributing
 

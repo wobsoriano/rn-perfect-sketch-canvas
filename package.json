@@ -1,7 +1,7 @@
 {
   "name": "rn-perfect-sketch-canvas",
   "version": "0.1.0",
-  "description": "Perfect pressure-sensitive drawing for both iOS and Android.",
+  "description": "A React Native component for drawing perfect pressure-sensitive freehand lines for both iOS and Android.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/index.d.ts",
