@@ -2,6 +2,8 @@
 
 A React Native component for drawing perfect pressure-sensitive freehand lines using [perfect-freehand](https://github.com/steveruizok/perfect-freehand) and [Skia renderer](https://shopify.github.io/react-native-skia/).
 
+<img src="./demo.gif" height="200">
+
 ## Installation
 
 ```sh
