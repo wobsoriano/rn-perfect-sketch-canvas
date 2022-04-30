@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
 | `toImage()`      | Get a snapshot from the canvas in the surface.   |
 | `toSvg(width: number, height: number, backgroundColor?: string)`      | Get the svg string of all paths.   |
 | `toPoints()`      | Get the array of point groups that got drawn in the canvas.    |
-| `addPoints(points: { x: number, y: number }[][])`      | Draws from an array of point groups.   |
+| `addPoints(points: [x, y][][])`      | Draws from an array of point groups.   |
 
 ## Contributing
 
