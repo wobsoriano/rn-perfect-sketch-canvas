@@ -11,9 +11,9 @@ import React, {
   useImperativeHandle,
   useMemo,
 } from 'react';
-import { drawingState, derivedPaths } from 'src/store';
+import { drawingState, derivedPaths } from '../../store';
 import { useSnapshot } from 'valtio';
-import { createHistoryStack, createSvgFromPaths } from 'src/utils';
+import { createHistoryStack, createSvgFromPaths } from '../../utils';
 import type { SketchCanvasRef, SketchCanvasProps } from './types';
 import { ImageFormat } from './types';
 import { STROKE_COLOR, STROKE_STYLE, STROKE_WIDTH } from './constants';

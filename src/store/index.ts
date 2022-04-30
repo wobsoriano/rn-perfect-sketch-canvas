@@ -1,7 +1,7 @@
 import getStroke from 'perfect-freehand';
-import { STROKE_WIDTH } from 'src/components/SketchCanvas/constants';
-import type { SketchCanvasProps } from 'src/components/SketchCanvas/types';
-import { getSvgPathFromStroke } from 'src/utils';
+import { STROKE_WIDTH } from '../components/SketchCanvas/constants';
+import type { SketchCanvasProps } from '../components/SketchCanvas/types';
+import { getSvgPathFromStroke } from '../utils';
 import { proxy } from 'valtio';
 import { derive } from 'valtio/utils';
 
