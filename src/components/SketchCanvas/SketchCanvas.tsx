@@ -103,12 +103,7 @@ export const SketchCanvas = forwardRef<SketchCanvasRef, SketchCanvasProps>(
       {
         onStart: (touchInfo: TouchInfo) => {
           drawingState.isDrawing = true;
-          drawingState.currentPoints.points = [
-            {
-              x: touchInfo.x,
-              y: touchInfo.y,
-            },
-          ];
+          drawingState.currentPoints.points = [[touchInfo.x, touchInfo.y]];
         },
         onActive: (touchInfo: TouchInfo) => {
           if (!drawingState.isDrawing) {
@@ -117,10 +112,7 @@ export const SketchCanvas = forwardRef<SketchCanvasRef, SketchCanvasProps>(
 
           drawingState.currentPoints.points = [
             ...(drawingState.currentPoints.points ?? []),
-            {
-              x: touchInfo.x,
-              y: touchInfo.y,
-            },
+            [touchInfo.x, touchInfo.y],
           ];
         },
         onEnd: (touchInfo: TouchInfo) => {

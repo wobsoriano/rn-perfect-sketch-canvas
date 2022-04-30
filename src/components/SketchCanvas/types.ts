@@ -29,7 +29,4 @@ export interface SketchCanvasProps {
   topChildren?: React.ReactNode;
 }
 
-export type Point = {
-  x: number;
-  y: number;
-};
+export type Point = [number, number];
