@@ -16,6 +16,7 @@ export interface SketchCanvasRef {
   toBase64: (format?: ImageFormat, quality?: number) => string | undefined;
   toImage: () => SkImage | undefined;
   toSvg: (width: number, height: number, backgroundColor?: string) => string;
+  toPoints: () => Point[][];
 }
 
 export interface SketchCanvasProps {
@@ -26,3 +27,8 @@ export interface SketchCanvasProps {
   children?: React.ReactNode;
   topChildren?: React.ReactNode;
 }
+
+export type Point = {
+  x: number;
+  y: number;
+};

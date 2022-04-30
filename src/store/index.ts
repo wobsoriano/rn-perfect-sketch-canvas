@@ -1,14 +1,12 @@
 import getStroke from 'perfect-freehand';
 import { STROKE_WIDTH } from '../components/SketchCanvas/constants';
-import type { SketchCanvasProps } from '../components/SketchCanvas/types';
+import type {
+  Point,
+  SketchCanvasProps,
+} from '../components/SketchCanvas/types';
 import { getSvgPathFromStroke } from '../utils';
 import { proxy } from 'valtio';
 import { derive } from 'valtio/utils';
-
-type Point = {
-  x: number;
-  y: number;
-};
 
 interface CompletedPoints {
   id: number;
