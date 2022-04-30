@@ -58,6 +58,8 @@ const styles = StyleSheet.create({
 | `toBase64`      | Get the base64 of image.   |
 | `toImage`      | Get a snapshot from the canvas in the surface.   |
 | `toSvg`      | Get the svg string of all paths.   |
+| `toPoints`      | Get the array of point groups that got drawn in the canvas.    |
+| `addPoints`      | Draws from an array of point groups.   |
 
 ## Contributing
 
