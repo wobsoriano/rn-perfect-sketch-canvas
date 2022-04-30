@@ -17,6 +17,7 @@ export interface SketchCanvasRef {
   toImage: () => SkImage | undefined;
   toSvg: (width: number, height: number, backgroundColor?: string) => string;
   toPoints: () => Point[][];
+  addPoints: (points: Point[][]) => void;
 }
 
 export interface SketchCanvasProps {

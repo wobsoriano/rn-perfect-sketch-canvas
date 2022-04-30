@@ -52,14 +52,14 @@ const styles = StyleSheet.create({
 
 | Method           | Description|
 | ------------------ | -------- |
-| `reset`   | Clear all the paths.   |
-| `undo`      | Undo   |
-| `redo`      | Redo   |
-| `toBase64`      | Get the base64 of image.   |
-| `toImage`      | Get a snapshot from the canvas in the surface.   |
-| `toSvg`      | Get the svg string of all paths.   |
-| `toPoints`      | Get the array of point groups that got drawn in the canvas.    |
-| `addPoints`      | Draws from an array of point groups.   |
+| `reset()`   | Clear all the paths.   |
+| `undo()`      | Undo   |
+| `redo()`      | Redo   |
+| `toBase64(format, quality)`      | Get the base64 of image.   |
+| `toImage()`      | Get a snapshot from the canvas in the surface.   |
+| `toSvg(width: number, height: number, backgroundColor?: string)`      | Get the svg string of all paths.   |
+| `toPoints()`      | Get the array of point groups that got drawn in the canvas.    |
+| `addPoints(points: { x: number, y: number }[][])`      | Draws from an array of point groups.   |
 
 ## Contributing
 
