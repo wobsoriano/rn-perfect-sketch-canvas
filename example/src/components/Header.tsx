@@ -1,7 +1,8 @@
 import React, { MutableRefObject } from 'react';
 import { Text, View, TouchableOpacity, StyleSheet } from 'react-native';
 import type { SketchCanvasRef } from 'rn-perfect-sketch-canvas';
-import { getElevation } from '../utils';
+import { state } from '../store';
+import Util from '../utils';
 
 interface Props {
   canvasRef: MutableRefObject<SketchCanvasRef | null>;
@@ -13,6 +14,8 @@ const Header: React.FC<Props> = ({ canvasRef }) => {
    */
   const reset = () => {
     canvasRef.current?.reset();
+    state.strokeColor = 'black';
+    state.strokeWidth = 8;
   };
 
   const save = () => {
@@ -93,7 +96,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 100,
-    ...getElevation(1),
+    ...Util.getElevation(1),
   },
   buttonText: {
     color: 'black',

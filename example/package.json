@@ -11,7 +11,8 @@
   "dependencies": {
     "@shopify/react-native-skia": "^0.1.123",
     "react": "17.0.1",
-    "react-native": "0.64.2"
+    "react-native": "0.64.2",
+    "valtio": "^1.6.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",

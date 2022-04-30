@@ -3,7 +3,7 @@
  * @param elevation
  * @returns
  */
-export const getElevation = (elevation: number) => {
+const getElevation = (elevation: number) => {
   return {
     elevation,
     shadowColor: 'black',
@@ -11,4 +11,8 @@ export const getElevation = (elevation: number) => {
     shadowOpacity: 0.2,
     shadowRadius: 0.7 * elevation,
   };
+};
+
+export default {
+  getElevation,
 };

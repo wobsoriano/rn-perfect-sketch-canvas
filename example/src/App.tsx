@@ -7,11 +7,15 @@ import {
   useWindowDimensions,
 } from 'react-native';
 import { SketchCanvas, SketchCanvasRef } from 'rn-perfect-sketch-canvas';
+import { useSnapshot } from 'valtio';
 import Header from './components/Header';
+import Toolbar from './components/Toolbar';
+import { state } from './store';
 
 export default function App() {
   const { width } = useWindowDimensions();
   const canvasRef = useRef<SketchCanvasRef>(null);
+  const snap = useSnapshot(state);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -33,8 +37,15 @@ export default function App() {
             elevation: 1,
           }}
         >
-          <SketchCanvas ref={canvasRef} containerStyle={styles.container} />
+          <SketchCanvas
+            strokeColor={snap.strokeColor}
+            strokeWidth={snap.strokeWidth}
+            ref={canvasRef}
+            containerStyle={styles.container}
+          />
         </View>
+
+        <Toolbar />
       </View>
     </SafeAreaView>
   );
