@@ -131,7 +131,7 @@
     ]
   },
   "dependencies": {
-    "perfect-freehand": "^1.0.16",
+    "perfect-freehand": "^1.1.0",
     "valtio": "^1.6.0"
   }
 }
