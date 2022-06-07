@@ -1642,10 +1642,10 @@
     conventional-recommended-bump "^6.1.0"
     prepend-file "^2.0.0"
 
-"@shopify/react-native-skia@^0.1.123":
-  version "0.1.123"
-  resolved "https://registry.yarnpkg.com/@shopify/react-native-skia/-/react-native-skia-0.1.123.tgz#eaaf886cf1ca3b49f4ba79b826cd4b8f803b933e"
-  integrity sha512-Yn9nHYRuTz84eCbHbpTi8VbP33tQc1D6rDQNEj7fgV6aPusaN79XjnnxtPsZsO+nLlbkpI3q1x+2Ds3Qu1I8ZA==
+"@shopify/react-native-skia@^0.1.130":
+  version "0.1.130"
+  resolved "https://registry.yarnpkg.com/@shopify/react-native-skia/-/react-native-skia-0.1.130.tgz#a3db74db128f6c521d189397ba93afea2216f994"
+  integrity sha512-g/A3TtDdy3Fo17okrKLbQKbbFt4StodEYtwqnvrLiu5RU5MjHNWXGZR7QTQSxrggQsUUOSxX3ZRxzf/pt2g9EQ==
   dependencies:
     react-reconciler "^0.26.2"
 
