@@ -43,7 +43,7 @@
     "@commitlint/config-conventional": "^11.0.0",
     "@react-native-community/eslint-config": "^2.0.0",
     "@release-it/conventional-changelog": "^2.0.0",
-    "@shopify/react-native-skia": "^0.1.130",
+    "@shopify/react-native-skia": "^0.1.134",
     "@types/react": "^16.9.19",
     "@types/react-native": "^0.67.6",
     "commitlint": "^11.0.0",
