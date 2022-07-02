@@ -68,6 +68,7 @@ export const SketchCanvas = forwardRef<SketchCanvasRef, SketchCanvasProps>(
         const image = canvasRef.current?.makeImageSnapshot();
         if (image) {
           return image.encodeToBase64(
+            // @ts-expect-error: Internal
             format ?? ImageFormat.PNG,
             quality ?? 100
           );
