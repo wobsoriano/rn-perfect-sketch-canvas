@@ -14,7 +14,12 @@ import React, {
 import { drawingState, derivedPaths } from '../../store';
 import { useSnapshot } from 'valtio';
 import { createHistoryStack, createSvgFromPaths } from '../../utils';
-import type { SketchCanvasRef, SketchCanvasProps, Point } from './types';
+import type {
+  SketchCanvasRef,
+  SketchCanvasProps,
+  Point,
+  StyleOptions,
+} from './types';
 import { ImageFormat } from './types';
 import { STROKE_COLOR, STROKE_STYLE, STROKE_WIDTH } from './constants';
 
@@ -88,13 +93,13 @@ export const SketchCanvas = forwardRef<SketchCanvasRef, SketchCanvasProps>(
       toPoints: () => {
         return drawingState.completedPoints.map((p) => p.points);
       },
-      addPoints: (points: Point[][]) => {
+      addPoints: (points: Point[][], style?: StyleOptions) => {
         const formatted = points.map((data) => ({
           id: Date.now(),
           points: data,
-          color: STROKE_COLOR,
-          width: STROKE_WIDTH,
-          style: STROKE_STYLE,
+          color: style?.strokeColor ?? STROKE_COLOR,
+          width: style?.strokeWidth ?? STROKE_WIDTH,
+          style: style?.strokeStyle ?? STROKE_STYLE,
         }));
         drawingState.completedPoints = formatted;
       },

@@ -17,7 +17,7 @@ export interface SketchCanvasRef {
   toImage: () => SkImage | undefined;
   toSvg: (width: number, height: number, backgroundColor?: string) => string;
   toPoints: () => Point[][];
-  addPoints: (points: Point[][]) => void;
+  addPoints: (points: Point[][], style?: StyleOptions) => void;
 }
 
 export interface SketchCanvasProps {
@@ -27,6 +27,12 @@ export interface SketchCanvasProps {
   containerStyle?: StyleProp<ViewStyle>;
   children?: React.ReactNode;
   topChildren?: React.ReactNode;
+}
+
+export interface StyleOptions {
+  strokeColor?: Color;
+  strokeStyle?: 'stroke' | 'fill';
+  strokeWidth?: number;
 }
 
 export type Point = [number, number];
