@@ -47,6 +47,8 @@ const styles = StyleSheet.create({
 | `containerStyle`   | object   | {}       | Styles to be applied on canvas component.            |
 | `strokeColor`      | string   | black   | Color of stroke.                                      |
 | `strokeWidth`      | number   | 8      | Size (diameter) of the stroke.                        |
+| `topChildren`      | ReactNode   |      |        Nodes to be put on top of sketch                 |
+| `bottomChildren`      | ReactNode   |      |     Nodes to be put on bottom of sketch (Background)                    |
 
 ## Methods
 

@@ -27,6 +27,7 @@ export interface SketchCanvasProps {
   containerStyle?: StyleProp<ViewStyle>;
   children?: React.ReactNode;
   topChildren?: React.ReactNode;
+  bottomChildren?: React.ReactNode;
 }
 
 export interface StyleOptions {

@@ -6,6 +6,7 @@ import {
   View,
   useWindowDimensions,
 } from 'react-native';
+ 
 import { SketchCanvas, SketchCanvasRef } from 'rn-perfect-sketch-canvas';
 import { useSnapshot } from 'valtio';
 import Header from './components/Header';
