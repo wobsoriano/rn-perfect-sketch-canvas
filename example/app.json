@@ -1,4 +1,23 @@
 {
-  "name": "RnPerfectSketchCanvasExample",
-  "displayName": "RnPerfectSketchCanvas Example"
+  "name": "rn-perfect-sketch-canvas-example",
+  "displayName": "RnPerfectSketchCanvas Example",
+  "expo": {
+    "name": "rn-perfect-sketch-canvas-example",
+    "slug": "rn-perfect-sketch-canvas-example",
+    "description": "Example app for react-native-awesome-module",
+    "privacy": "public",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "jsEngine": "hermes",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
 }
