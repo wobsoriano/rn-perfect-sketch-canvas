@@ -1,11 +1,7 @@
-import type { Color, SkImage } from '@shopify/react-native-skia';
+import type { Color, ImageFormat, SkImage } from '@shopify/react-native-skia';
 import type { StyleProp, ViewStyle } from 'react-native';
+import type { CompletedPoints } from 'src/store';
 
-export enum ImageFormat {
-  PNG,
-  JPEG,
-  WEBP,
-}
 
 export type StrokeStyle = 'stroke' | 'fill';
 
@@ -16,6 +12,8 @@ export interface SketchCanvasRef {
   toBase64: (format?: ImageFormat, quality?: number) => string | undefined;
   toImage: () => SkImage | undefined;
   toSvg: (width: number, height: number, backgroundColor?: string) => string;
+  toPath: () => CompletedPoints[];
+  drawPath: (path: CompletedPoints[]) => void;
   toPoints: () => Point[][];
   addPoints: (points: Point[][], style?: StyleOptions) => void;
 }
