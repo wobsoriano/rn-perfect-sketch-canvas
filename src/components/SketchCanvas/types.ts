@@ -14,6 +14,7 @@ export interface SketchCanvasRef {
   toSvg: (width: number, height: number, backgroundColor?: string) => string;
   toPath: () => CompletedPoints[];
   drawPath: (path: CompletedPoints[]) => void;
+  withdraw: () => void;
   toPoints: () => Point[][];
   addPoints: (points: Point[][], style?: StyleOptions) => void;
 }
