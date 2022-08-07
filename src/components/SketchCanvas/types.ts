@@ -1,11 +1,6 @@
-import type { Color, SkImage } from '@shopify/react-native-skia';
+import type { Color, ImageFormat, SkImage } from '@shopify/react-native-skia';
 import type { StyleProp, ViewStyle } from 'react-native';
 
-export enum ImageFormat {
-  PNG,
-  JPEG,
-  WEBP,
-}
 
 export type StrokeStyle = 'stroke' | 'fill';
 

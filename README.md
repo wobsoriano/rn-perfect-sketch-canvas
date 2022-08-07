@@ -60,6 +60,8 @@ const styles = StyleSheet.create({
 | `toBase64(format?: ImageFormat, quality?: number)`      | Get the base64 of image.   |
 | `toImage()`      | Get a snapshot from the canvas in the surface.   |
 | `toSvg(width: number, height: number, backgroundColor?: string)`      | Get the svg string of all paths.   |
+| `toPath()`      | Get the array of point with {color, width, style, id} groups that got drawn in the canvas.    |
+| `drawPath(path: points[])`      | Draws from an array of point with {color, width, style, id} groups.   |
 | `toPoints()`      | Get the array of point groups that got drawn in the canvas.    |
 | `addPoints(points: [x, y][][])`      | Draws from an array of point groups.   |
 
