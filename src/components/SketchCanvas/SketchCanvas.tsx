@@ -95,6 +95,9 @@ export const SketchCanvas = forwardRef<SketchCanvasRef, SketchCanvasProps>(
       drawPath: (path: CompletedPoints[]) => {
         drawingState.completedPoints = path;
       },
+      withdraw: () => {
+        drawingState.completedPoints = drawingState.completedPoints.slice(0, -1);
+      },
       toPoints: () => {
         return drawingState.completedPoints.map((p) => p.points);
       },
