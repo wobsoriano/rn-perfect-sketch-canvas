@@ -33,6 +33,8 @@ export const SketchCanvas = forwardRef<SketchCanvasRef, SketchCanvasProps>(
       children,
       topChildren,
       bottomChildren,
+      onTouchStart = () => {},
+      onTouchEnd = () => {},
     },
     ref
   ) => {
@@ -111,6 +113,7 @@ export const SketchCanvas = forwardRef<SketchCanvasRef, SketchCanvasProps>(
         onStart: (touchInfo: TouchInfo) => {
           drawingState.isDrawing = true;
           drawingState.currentPoints.points = [[touchInfo.x, touchInfo.y]];
+          onTouchStart();
         },
         onActive: (touchInfo: TouchInfo) => {
           if (!drawingState.isDrawing) {
@@ -145,6 +148,7 @@ export const SketchCanvas = forwardRef<SketchCanvasRef, SketchCanvasProps>(
             currentPoints: drawingState.currentPoints,
             completedPoints: drawingState.completedPoints,
           });
+          onTouchEnd();
         },
       },
       [strokeColor, strokeStyle]
