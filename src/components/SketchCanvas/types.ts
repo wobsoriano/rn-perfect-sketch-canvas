@@ -28,6 +28,8 @@ export interface SketchCanvasProps {
   children?: React.ReactNode;
   topChildren?: React.ReactNode;
   bottomChildren?: React.ReactNode;
+  onTouchStart?: () => void;
+  onTouchEnd?: () => void;
 }
 
 export interface StyleOptions {
