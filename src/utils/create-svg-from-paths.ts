@@ -22,7 +22,7 @@ export default function createSvgFromPaths(
     options.backgroundColor || 'white'
   }"/>
   <g>
-    ${paths.map((path) => `<path d="${path.path}" stroke="${path.color}" />`)}
+    ${paths.map((path) => `<path d="${path.path}" stroke="${path.color}" />`).join('')}
     </g>
     </svg>`;
 }
