@@ -11,7 +11,7 @@ import React, {
   useImperativeHandle,
   useMemo,
 } from 'react';
-import { drawingState, derivedPaths } from '../../store';
+import { drawingState, derivedPaths, CompletedPoints } from '../../store';
 import { useSnapshot } from 'valtio';
 import { createHistoryStack, createSvgFromPaths } from '../../utils';
 import type {
@@ -20,7 +20,6 @@ import type {
   Point,
   StyleOptions,
 } from './types';
-import { ImageFormat } from './types';
 import { STROKE_COLOR, STROKE_STYLE, STROKE_WIDTH } from './constants';
 
 export const SketchCanvas = forwardRef<SketchCanvasRef, SketchCanvasProps>(
@@ -76,9 +75,8 @@ export const SketchCanvas = forwardRef<SketchCanvasRef, SketchCanvasProps>(
         const image = canvasRef.current?.makeImageSnapshot();
         if (image) {
           return image.encodeToBase64(
-            // @ts-expect-error: Internal
-            format ?? ImageFormat.PNG,
-            quality ?? 100
+            format,
+            quality,
           );
         }
         return undefined;
@@ -92,6 +90,15 @@ export const SketchCanvas = forwardRef<SketchCanvasRef, SketchCanvasProps>(
           height,
           backgroundColor,
         });
+      },
+      toPath: () => {
+        return drawingState.completedPoints;
+      },
+      drawPath: (path: CompletedPoints[]) => {
+        drawingState.completedPoints = path;
+      },
+      withdraw: () => {
+        drawingState.completedPoints = drawingState.completedPoints.slice(0, -1);
       },
       toPoints: () => {
         return drawingState.completedPoints.map((p) => p.points);

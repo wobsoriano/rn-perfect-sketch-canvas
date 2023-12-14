@@ -8,7 +8,7 @@ import { getSvgPathFromStroke } from '../utils';
 import { proxy } from 'valtio';
 import { derive } from 'valtio/utils';
 
-interface CompletedPoints {
+export interface CompletedPoints {
   id: number;
   points: Point[];
   color: SketchCanvasProps['strokeColor'];
